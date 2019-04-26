@@ -1,0 +1,21 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<div class="container" id="contact-page">
+	<div class="row">
+		<form novalidate class="simple-form" name="form">
+			<input type="text" class="subject-text form-input" name="subject" placeholder="SUBJECT" ng-model="contactForm.subject" ng-disabled="contactForm.formSubmit"  required/>
+			<!-- <input type="email" ng-model="user.email" /><br /> -->
+			<div>&nbsp;</div>
+			<textarea class="form-input message-text" name="message"  placeholder="TYPE YOUR MESSAGE HERE." ng-model="contactForm.message" ng-disabled="contactForm.formSubmit"  required></textarea>
+			<input type="submit" class="submit pull-right" ng-disabled="contactForm.formSubmit" ng-click="submitMessage()" value="SUBMIT" />
+			
+			<div ng-show="form.$submitted || form.subject.$touched" class="text-right error-message col-xs-12 nopadding">
+		    	<div ng-show="form.subject.$error.required"> YOU MUST INCLUDE A SUBJECT </div>
+		    </div>
+			<div ng-show="form.$submitted || form.message.$touched" class="text-right error-message col-xs-12 nopadding">
+		    	<div ng-show="form.message.$error.required"> YOU MUST INCLUDE A MESSAGE </div>
+		    </div>			
+		</form>
+	</div>
+	
+</div>

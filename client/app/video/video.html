@@ -1,0 +1,50 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<div class="loader-container" ng-if="!contentLoaded">
+	<div aria-busy="true" aria-label="Loading" role="progressbar">
+		<div role="presentation"></div>
+	</div>
+</div>
+
+<div class="container" id="video-page">
+	<div class="row">
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 text-center">
+			<div class="box-header text-left"> DEUTSCHE BANK </div>
+			<iframe spinkit-image-preloader='three-bounce-spinner' style="height:300px;width:300px;"
+				src="https://player.vimeo.com/video/103555025?color=ffffff&title=0&byline=0" height="281" width="100%"
+				frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 text-center">
+			<div class="box-header text-left"> TGT WALLET </div>
+			<iframe spinkit-image-preloader='three-bounce-spinner' style="height:300px;width:300px;"
+				src="https://player.vimeo.com/video/57492970?color=ffffff&title=0&byline=0&portrait=0" height="281"
+				width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 text-center">
+			<div class="box-header text-left"> HOUR FOR AN HOUR </div>
+			<iframe spinkit-image-preloader='three-bounce-spinner' style="height:300px;width:300px;" height="281"
+				width="100%" src="https://www.youtube.com/embed/6mV2iJskRvg" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<div>&nbsp;</div>
+		<div>&nbsp;</div>
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 text-center">
+			<div class="box-header text-left"> DOT - LAUNCH VIDEO </div>
+			<iframe spinkit-image-preloader='three-bounce-spinner' style="height:300px;width:300px;" height="281"
+				width="100%" src="https://player.vimeo.com/video/332110199" frameborder="0" webkitallowfullscreen
+				mozallowfullscreen allowfullscreen></iframe>
+		</div>
+		<!-- <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+			<div class="box-header text-left"> SILKSCREEN.IO </div>
+			<div class="silkscreen-box"></div>
+		</div> -->
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+			<div class="box-header text-left"> </div>
+			<a ui-sref="contact">
+				<div class="your-video-box" ng-class="{'contact': showColor}" ng-mouseover="showColor = true"
+					ng-mouseleave="showColor=false">
+					<span class="make-center"> YOUR NEXT VIDEO! </span>
+				</div>
+			</a>
+		</div>
+	</div>
+</div>

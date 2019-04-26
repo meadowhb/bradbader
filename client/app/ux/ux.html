@@ -1,0 +1,128 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<div class="loader-container" ng-if="!contentLoaded">
+	<div aria-busy="true" aria-label="Loading" role="progressbar">
+		<div role="presentation"></div>
+	</div>
+</div>
+
+
+<div class="container ux" id="ux-page">
+	<div class="row" ng-init="init()">
+		<div ng-class="{'loaded': loaded}" class="col-lg-4 col-md-4 col-sm-6 col-xs-12 text-center">
+			<div class="ux-box-header text-left">CHAIRLIFT</div>
+			<img ng-class="{'loaded': loaded}" spinkit-image-preloader='three-bounce-spinner' class="img-responsive"
+				src="assets/images/chairlift/chairlift landing page.jpg" ng-click="toggleOverlay('chairlift')" />
+		</div>
+		<div class="visible-xs">&nbsp;</div>
+
+		<div ng-class="{'loaded': loaded}" class="col-lg-4 col-md-4 col-sm-6 col-xs-12 text-center">
+			<div class="ux-box-header text-left">JOBSTACK</div>
+			<img ng-class="{'loaded': loaded}" spinkit-image-preloader='three-bounce-spinner' class="img-responsive"
+				src="assets/images/jobstack/jobstack_thumb.jpg" ng-click="toggleOverlay('jobstack')" />
+		</div>
+		<div class="visible-xs">&nbsp;</div>
+
+		<div class="clearfix visible-sm"></div>
+		<div ng-class="{'portrait-image': loaded}" class="col-lg-4 col-md-4 col-sm-6 col-xs-12 text-center">
+			<div class="ux-box-header text-left">SURFCAST</div>
+			<img ng-class="{'loaded': loaded}" spinkit-image-preloader='three-bounce-spinner' class="img-responsive"
+				src="assets/images/surfcast/surf_1.png" ng-click="toggleOverlay('surfcast')" />
+		</div>
+		<div class="clearfix visible-md"></div>
+		<div class="clearfix visible-lg"></div>
+		<div>&nbsp;</div>
+
+		<div ng-class="{'loaded': loaded}" class="col-lg-4 col-md-4 col-sm-6 col-xs-12 text-center">
+			<div class="ux-box-header text-left">SILKSCREEN</div>
+			<img ng-class="{'loaded': loaded}" spinkit-image-preloader='three-bounce-spinner' class="img-responsive"
+				src="assets/images/silkscreen/silkscreen_thumb.png" ng-click="toggleOverlay('silkscreen')" />
+		</div>
+		<div class="visible-xs">&nbsp;</div>
+		<div class="visible-sm">&nbsp;</div>
+		<div class="clearfix visible-sm"></div>
+		<div ng-class="{'loaded': loaded}" class="col-lg-4 col-md-4 col-sm-6 col-xs-12 text-center">
+			<div class="ux-box-header text-left">BUZZFEED</div>
+			<img ng-class="{'loaded': loaded}" spinkit-image-preloader='three-bounce-spinner' class="img-responsive"
+				src="assets/images/buzzfeed/buzzfeed.gif" ng-click="toggleOverlay('buzzfeed')" />
+		</div>
+		<div class="visible-xs">&nbsp;</div>
+
+		<div ng-class="{'loaded': loaded}" class="col-lg-4 col-md-4 col-sm-6 col-xs-12 text-center">
+			<div class="ux-box-header text-left">PAW PRINTS</div>
+			<img ng-class="{'loaded': loaded}" spinkit-image-preloader='three-bounce-spinner' class="img-responsive"
+				src="//cdn.shopify.com/s/files/1/0720/3399/t/7/assets/dog.gif?9221415788620758033"
+				ng-click="toggleOverlay('pawprints')" alt="mobile banner">
+		</div>
+		<div class="clearfix visible-md"></div>
+		<div class="clearfix visible-lg"></div>
+		<div class="clearfix visible-sm"></div>
+		<div>&nbsp;</div>
+
+		<div ng-class="{'portrait-image': loaded}" class="col-lg-4 col-md-4 col-sm-6 col-xs-12 text-center">
+			<div class="ux-box-header text-left">CLUE</div>
+			<img ng-class="{'loaded': loaded}" spinkit-image-preloader='three-bounce-spinner' class="img-responsive"
+				src="assets/images/clue/clue_thumb.png" ng-click="toggleOverlay('clue')">
+		</div>
+		<div class="visible-xs">&nbsp;</div>
+
+		<div ng-class="{'portrait-image': loaded}" class="col-lg-4 col-md-4 col-sm-6 col-xs-12 text-center">
+			<div class="ux-box-header text-left">DWELLING</div>
+			<img ng-class="{'loaded': loaded}" spinkit-image-preloader='three-bounce-spinner' class="img-responsive"
+				src="assets/images/dwelling/dwelling_thumb.png" ng-click="toggleOverlay('dwelling')">
+		</div>
+		<div class="visible-xs">&nbsp;</div>
+
+		<div ng-class="{'loaded': loaded}" class="col-lg-4 col-md-4 col-sm-6 col-xs-12 text-center">
+			<div class="ux-box-header text-left">GROUPON</div>
+			<img ng-class="{'loaded': loaded}" spinkit-image-preloader='three-bounce-spinner' class="img-responsive"
+				src="assets/images/groupon/groupon_thumb3.png" ng-click="toggleOverlay('groupon')">
+		</div>
+
+		<div class="visible-xs">&nbsp;</div>
+
+		<div ng-class="{'portrait-image': loaded}" class="col-lg-4 col-md-4 col-sm-6 col-xs-12 text-center">
+			<div class="ux-box-header text-left">ROAM</div>
+			<img ng-class="{'loaded': loaded}" spinkit-image-preloader='three-bounce-spinner' class="img-responsive"
+				src="assets/images/roam/thumbnail_roam.png" ng-click="toggleOverlay('roam')">
+		</div>
+		<div class="visible-xs">&nbsp;</div>
+		<div>&nbsp;</div>
+		<div ng-class="{'portrait-image': loaded}" class="col-lg-4 col-md-4 col-sm-6 col-xs-12 text-center">
+			<div class="ux-box-header text-left">DOT</div>
+			<img ng-class="{'loaded': loaded}" spinkit-image-preloader='three-bounce-spinner' class="img-responsive"
+				src="assets/images/dot/dotGif.gif" ng-click="toggleOverlay('dot')">
+		</div>
+		<div class="visible-xs">&nbsp;</div>
+
+		<div ng-class="{'loaded': loaded}" class="col-lg-4 col-md-4 col-sm-6 col-xs-12 text-center">
+			<div class="ux-box-header text-left">BRUSH</div>
+			<img ng-class="{'loaded': loaded}" spinkit-image-preloader='three-bounce-spinner' class="img-responsive"
+				src="assets/images/brush/brushThumb.png" ng-click="toggleOverlay('brush')">
+		</div>
+
+		<div class="visible-xs">&nbsp;</div>
+
+		<div ng-class="{'portrait-image': loaded}" class="col-lg-4 col-md-4 col-sm-6 col-xs-12 text-center">
+			<div class="ux-box-header text-left">SHIBY</div>
+			<img ng-class="{'loaded': loaded}" spinkit-image-preloader='three-bounce-spinner' class="img-responsive"
+				src="assets/images/shiby/shipby_proto-1.png" ng-click="toggleOverlay('shiby')">
+		</div>
+
+	</div>
+</div>
+<!-- open/close -->
+<div class="overlay overlay-scale">
+	<span type="button" class="overlay-close" ng-click="toggleOverlay()">Close</span>
+	<div class="carousel-container">
+		<carousel interval="myInterval" no-wrap="noWrapSlides">
+			<slide ng-repeat="slide in slides" active="slide.active">
+				<img ng-src="{{slide.image}}" style="margin:auto;">
+				<!-- <div class="carousel-caption">
+	          <h4>Slide {{$index}}</h4>
+	          <p>{{slide.text}}</p>
+	        </div> -->
+			</slide>
+		</carousel>
+	</div>
+</div>

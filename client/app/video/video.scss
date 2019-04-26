@@ -1,0 +1,38 @@
+
+#video-page {
+	.box-header {
+		font-family: 'aviner-demi-bold';
+		color: #8f8f8f;
+		font-size: 20px;
+		height: 25px;
+		margin-bottom: 10px;
+	}
+
+	.silkscreen-box {
+		background: #eaf1ff;
+	}
+
+	.silkscreen-box, .your-video-box {
+		height: 281px;
+	}
+
+	.your-video-box {
+		color: #8f8f8f;
+	    font-size: 20px;
+	    position: relative;
+	    text-align: center;
+	}
+	
+	.your-video-box.contact {
+		background: $contact-color;
+	}
+
+	span.make-center {
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    transform: translate(-50%,-50%);
+	    width: 100%;
+	}
+	
+}

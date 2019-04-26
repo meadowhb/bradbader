@@ -1,0 +1,297 @@
+$icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+$fa-font-path: "/bower_components/font-awesome/fonts";
+
+@import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
+@import '../bower_components/font-awesome/scss/fontawesome.scss';
+
+@font-face {
+    font-family: 'avenir-bold';
+    src: url(/assets/fonts/AvenirNextLTPro-Bold.woff);
+}
+
+@font-face {
+    font-family: 'avenir-bold-cn';
+    src: url(/assets/fonts/AvenirNextLTPro-BoldCn.woff);
+}
+
+@font-face {
+    font-family: 'avenir-regular';
+    src: url(/assets/fonts/AvenirNextLTPro-Regular.woff);
+}
+
+@font-face {
+    font-family: 'aviner-demi-bold';
+    src: url(/assets/fonts/AvenirNextLTPro-Demi.woff);
+}
+
+@font-face {
+    font-family: 'aviner-medium';
+    src: url(/assets/fonts/AvenirNextLTPro-MediumCn.woff);
+}
+
+
+/** COLOR VARIABLES
+*/
+$video-color: #ffc971;
+$twitter-color: #5890ff;
+$white: #ffffff;
+$insta-color: #f77373;
+$ux-color: #e1d860;
+$about-color: rgba(173, 173, 173, 0.63);
+$contact-color: #00f4bd;
+$warm-grey: #7c7c7c;
+$brownish-grey: #646464;
+$greyish: #adadad;
+
+/**
+ * App-wide Styles
+ */
+
+body, html {
+	font-family: 'avenir-bold';
+}
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
+/* Overlay style */
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #000;
+    z-index: 1000;
+}
+
+/* Overlay closing cross */
+.overlay .overlay-close {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    overflow: hidden;
+    border: none;
+    background: url(/assets/images/cross.png) no-repeat center center;
+    text-indent: 200%;
+    color: transparent;
+    outline: none;
+    z-index: 1001;
+    cursor: pointer;
+}
+
+/* Menu style */
+.overlay nav {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    height: 60%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.overlay ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    height: 100%;
+    position: relative;
+}
+
+.overlay ul li {
+    display: block;
+    height: 20%;
+    height: calc(100% / 5);
+    min-height: 54px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.overlay ul li a {
+    font-size: 54px;
+    font-weight: 300;
+    display: block;
+    color: #fff;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.overlay ul li a:hover,
+.overlay ul li a:focus {
+    color: #f0f0f0;
+}
+
+/* Effects */
+.overlay-scale {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    -webkit-transition: -webkit-transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+    transition: transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+}
+
+.overlay-scale.open {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);    
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+    transition: transform 0.4s, opacity 0.4s;
+}
+
+@media screen and (max-height: 30.5em) {
+    .overlay nav {
+        height: 70%;
+        font-size: 34px;
+    }
+    .overlay ul li {
+        min-height: 34px;
+    }
+}
+
+// LOADER style
+[role="progressbar"] {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  background-color: #C2C315;
+}
+[role="progressbar"]::before,
+[role="progressbar"]::after {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  right: -100%;
+  width: 2px;
+  height: 2px;
+  background-color: #BD3D00;
+  -webkit-animation: pac-dot linear 0.4s infinite;
+          animation: pac-dot linear 0.4s infinite;
+  content: '';
+}
+[role="progressbar"]::after {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+[role="progressbar"] [role="presentation"] {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: 0;
+  width: 19.2px;
+  height: 19.2px;
+  -webkit-transform: translate(50%, -50%);
+      -ms-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  -webkit-animation: bite linear 0.4s infinite;
+          animation: bite linear 0.4s infinite;
+}
+[role="progressbar"] [role="presentation"]::before {
+  display: block;
+  width: 19.2px;
+  height: 19.2px;
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+  background-color: #afa;
+  background-color: #FFF;
+  content: '';
+}
+@-webkit-keyframes bite {
+  0% {
+    -webkit-transform: translate(50%, -50%) rotateX(0);
+            transform: translate(50%, -50%) rotateX(0);
+  }
+  50% {
+    -webkit-transform: translate(50%, -50%) rotateX(-90deg);
+            transform: translate(50%, -50%) rotateX(-90deg);
+  }
+  100% {
+    -webkit-transform: translate(50%, -50%) rotateX(0);
+            transform: translate(50%, -50%) rotateX(0);
+  }
+}
+@keyframes bite {
+  0% {
+    -webkit-transform: translate(50%, -50%) rotateX(0);
+            transform: translate(50%, -50%) rotateX(0);
+  }
+  50% {
+    -webkit-transform: translate(50%, -50%) rotateX(-90deg);
+            transform: translate(50%, -50%) rotateX(-90deg);
+  }
+  100% {
+    -webkit-transform: translate(50%, -50%) rotateX(0);
+            transform: translate(50%, -50%) rotateX(0);
+  }
+}
+@-webkit-keyframes pac-dot {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 20%;
+  }
+}
+@keyframes pac-dot {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 20%;
+  }
+}
+
+.loader-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// a {
+//   display: inline-block;
+//   color: #fff;
+//   text-decoration: none;
+//   border-bottom: 1px dashed rgba(255,255,255,.3);
+//   transition: border-color ease-out .15s;
+  
+//   &:focus,
+//   &:hover {
+//     border-bottom-color: #fff;
+//   }
+// }
+
+// p {
+//   margin-top: 40px;
+//   color: #fff;
+//   font-size: 14px;
+//   font-family: Avenir Next, Helvetica Neue, sans-serif;
+// }
+
+[role="progressbar"] {
+  margin: 250px auto;
+}
+
+// Component styles are injected through grunt
+// injector
+@import 'about/about.scss';
+@import 'contact/contact.scss';
+@import 'insta/insta.scss';
+@import 'main/main.scss';
+@import 'ux/ux.scss';
+@import 'video/video.scss';
+@import 'modal/modal.scss';
+@import 'navbar/navbar.scss';
+// endinjector

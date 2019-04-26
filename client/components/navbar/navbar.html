@@ -1,0 +1,34 @@
+<div class="navbar navbar-static-top" ng-controller="NavbarCtrl" id="navbar">
+  <div class="container {{ $state.current.name }}" ng-class="{'active': activeNavbar && !mouseOnLi}" ng-mouseenter="activeNavbar=true;" ng-mouseleave="activeNavbar=false; ">
+    <div class="row">      
+      <div class="navbar-header col-xs-12 col-md-6">
+        <a href="/" class="navbar-brand">
+            BRAD BADER <span class="current-state">/{{ $state.current.name | uppercase }}</span>
+        </a>
+      </div>
+      <div class=" col-xs-12 col-md-6" id="navbar-main">
+        <ul class="nav navbar-nav navbar-right">
+          <li ui-sref="about" class="about-link about" ng-class="{'active': activeAbout}" ng-mouseenter="mouseEnterLi('activeAbout')" ng-mouseleave="mouseLeaveLi('activeAbout') " ng-if="$state.current.name !== 'about'">
+              <i class="fa fa-info-circle">  </i> 
+          </li>
+          <li ui-sref="ux" class="ux-link ux" ng-class="{'active': activeUx}" ng-mouseenter="mouseEnterLi('activeUx')" ng-mouseleave="mouseLeaveLi('activeUx')" ng-if="$state.current.name !== 'ux'">
+              <span class=""> UX </span>
+          </li>
+          <li ui-sref="video" class="video-link video" ng-class="{'active': activeVideo}" ng-mouseenter="mouseEnterLi('activeVideo')" ng-mouseleave="mouseLeaveLi('activeVideo')" ng-if="$state.current.name !== 'video'">
+              <i class="fa fa-film">  </i> 
+          </li>
+          <li class="twitter-link twitter" ng-class="{'active': activeTwitter}" ng-mouseenter="mouseEnterLi('activeTwitter')" ng-mouseleave="mouseLeaveLi('activeTwitter')" ng-if="$state.current.name !== 'twitter'" ng-click="openLink('http://twitter.com/bradbader')">
+              <i class="fa fa-twitter">  </i> 
+          </li>
+          <li ui-sref="insta" class="insta-link insta" ng-class="{'active': activeInsta}" ng-mouseenter="mouseEnterLi('activeInsta')" ng-mouseleave="mouseLeaveLi('activeInsta')" ng-if="$state.current.name !== 'insta'">
+              <i class="fa fa-instagram">  </i> 
+          </li>
+          <li ui-sref="contact" class="contact-link contact" ng-class="{'active': activeContact}" ng-mouseenter="mouseEnterLi('activeContact')" ng-mouseleave="mouseLeaveLi('activeContact')" ng-if="$state.current.name !== 'contact'">
+              <i class="fa fa-envelope-o">  </i> 
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

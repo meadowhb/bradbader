@@ -1,0 +1,119 @@
+
+#contact-page {
+    // margin-top: 43px;
+
+	::-webkit-input-placeholder {
+	    color: rgba(120,224,181, 0.6);
+	}
+
+	.form-input {
+		width: 100%;
+		padding-left: 15px;
+		border: 2px solid #50e3c2;
+		font-size: 40px;
+	}
+
+	.subject-text {
+		height: 102px;
+		color: rgba(120,224,181, 0.6);
+	}
+
+	.message-text {
+		min-height: 450px;
+		background-color: #f2fef6;
+		color: rgba(120, 224, 181, 0.88);
+    padding-top: 10px;
+	}
+
+	input.submit {
+		background-color: rgba(0, 255, 197, 0.44);
+		color: #FFF;
+		font-size: 40px;
+		// height: auto;
+		border: none;
+		padding: 15px 40px 10px 40px;
+    margin-top: 43px;
+    margin-bottom: 10px;
+		letter-spacing: -1px;
+	}
+
+	.error-message {
+		font-size: 15px;
+		color: #ffa9a9;
+		margin-top: 5px;
+	}
+
+    #contact-form {
+      padding-left: 0;
+      padding-right: 0;
+      font-size: 30px;
+
+      .form-group {
+        margin-bottom: 0 !important;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 21px 41px 21px 21px;
+        margin-bottom: 35px;
+        border: 2px solid #50e3c2;
+        color: rgba(120, 224, 181, 0.88)
+      }
+
+      button {
+         display: block;
+         float: right;
+         width: 243px;
+         padding-top: 24px;
+         padding-bottom: 24px;
+         margin-bottom: 12px;
+         background-color: rgba(0, 255, 197, 0.44);
+         color: #fff;
+         font-size: 40px;
+         letter-spacing: -1px;
+         border:none;
+      }
+
+      #contact-alert {
+        display: none;
+        font-size: 15px;
+        color: #ffa9a9;
+      }
+
+
+      ::-webkit-input-placeholder {
+        color: rgba(120, 224, 181, 0.6);
+      }
+
+      :-moz-placeholder { /* Firefox 18- */
+        color: rgba(120, 224, 181, 0.6);
+      }
+
+      ::-moz-placeholder {  /* Firefox 19+ */
+        color: rgba(120, 224, 181, 0.6);
+      }
+
+      :-ms-input-placeholder {
+        color: rgba(120, 224, 181, 0.6);
+      }
+    } // #contact-form
+
+    @media screen and (max-width: 768px) {
+      form {
+        padding: 0 5px;
+      }
+
+      .subject-text {
+        height: 60px;
+      }
+      .form-input {
+        padding-left: 10px;
+        font-size: 24px;
+      }
+      input.submit {
+        font-size: 24px;
+      }
+    }
+
+}

@@ -1,0 +1,113 @@
+
+
+#navbar {
+	color: #FFF;
+
+	#navbar-main {
+	    font-size: 30px;
+	}
+	
+	.container {
+		height: 80px;
+    	margin-bottom: 15px;
+	}
+
+	.navbar-header {
+	    position: relative;
+	    height: 80px;
+	}
+
+	.navbar-brand {
+		color: #FFF;
+		font-size: 30px;
+		position: absolute;
+	    top: 50%;
+	    transform: translateY(-50%);
+	    line-height: 1;
+	    span {
+	    	font-family: 'avenir-regular';
+	    }
+	}
+
+    .navbar-right {
+      height: 80px;
+      width: 400px;
+      background-color: #fff;
+    }
+
+    .navbar-right li {
+      float: left;
+      margin-bottom: 51px;
+    }
+
+	&.navbar li {
+	    width: 80px;
+	    height: 80px;
+	    position: relative;
+	    cursor: pointer;
+	    i.fa, span {
+	    	position: absolute;
+	    	top: 50%;
+	    	left: 50%;
+	    	transform: translate(-50%, -50%);
+	    }
+	    span {
+	    	margin-top: 5px; 
+	    }
+	}
+
+	.about {
+		background-color: rgba( $about-color, .7 );
+	}
+	.video {
+		background-color: rgba( $video-color, .7 );
+	}
+	.ux {
+		background-color: rgba( $ux-color, .7 );
+	}
+	.twitter {
+		background-color: rgba( $twitter-color, .7 );
+	}
+	.insta {
+		background-color: rgba( $insta-color, .7 );
+	}
+	.contact {
+		background-color: rgba( $contact-color, .7 );
+	}
+	.about.active {
+		background-color: rgba( $about-color, 1 );
+	}
+	.video.active {
+		background-color: rgba( $video-color, 1 );
+	}
+	.ux.active {
+		background-color: rgba( $ux-color, 1 );
+	}
+	.twitter.active {
+		background-color: rgba( $twitter-color, 1 );
+	}
+	.insta.active {
+		background-color: rgba( $insta-color, 1 );
+	}
+	.contact.active {
+		background-color: rgba( $contact-color, 1 );
+	}
+
+	@media screen and (max-width: 768px) {
+		.navbar-header {
+			width: 100%;
+			.navbar-brand {
+				font-size: 22px;
+			}
+		}
+
+		.navbar-right {
+		    width: 100%;
+		    display: flex;
+		    margin: 0;
+		}
+		&.navbar li {
+			width: 20%;
+		}
+	}
+}

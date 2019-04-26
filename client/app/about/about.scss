@@ -1,0 +1,91 @@
+
+#about-page {
+  margin-top: 20px;
+
+	.about-img {
+		margin: 0 auto;
+    margin-bottom: 20px;
+    width:100%;
+    max-height:437px;
+    text-align:center;
+	}
+
+
+	.favourite-header {
+		font-size: 44px;
+		color: #646464;
+    width:100%;
+    padding:0;
+    margin:0 auto 20px auto;
+    text-align:center;
+    letter-spacing:6px;
+    font-size:44px;
+    color:#646464;
+	}
+
+	.favourite-text {
+		font-family: 'avenir-medium';
+		font-size: 35px;
+		color: #adadad;
+	}
+
+	.about-button {
+	    display: block;
+	    width: 280px;
+	    padding: 17px 0;
+	    margin: 0 auto 20px auto;
+	    color: #50e3c2;
+	    font-size: 35px;
+	    background-color: rgba(158, 255, 235, 0.71);
+	    border: none;
+	    text-align: center;
+	}
+
+    #about-tags {
+      font-size:35px;
+      font-family:"avenir-bold";
+      /*width: 1170px;*/
+      padding:0;
+      margin:0 auto 20px auto;
+      text-align:justify;
+      color: #adadad;
+    }
+
+    #about-tags a {
+      color: #adadad !important;
+    }
+    @media screen and (min-width: 750px) and (max-width: 991px) {
+      .favourite-header {
+        font-size:30px;
+        letter-spacing: 3px;
+      }
+
+      #about-tags {
+        font-size: 30px;
+      }
+    }
+
+    @media screen and (min-width:992px) and (max-width: 1199px){
+      .ux-box {
+        margin-right: 1%;
+      }
+
+      .ux-box-surfcast {
+        margin-right: 0;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .favourite-header {
+        font-size: 32px;
+      }
+      #about-tags {
+        font-size: 24px;
+      }
+      .about-button {
+        width: 200px;
+        padding: 12px 0;
+        font-size: 24px; 
+      }
+    }
+}

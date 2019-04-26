@@ -1,0 +1,99 @@
+
+.overlay {
+
+  .carousel-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .carousel-container img {
+    max-height: 700px;
+    margin-top: 45% !important;
+    transform: translateY(-50%);
+  }
+
+  @media screen and (max-width: 768px) {
+    .overlay-close {
+      width: 30px;
+      height: 30px;
+    }
+    .carousel-container img {
+      transform: none;
+    }
+    .carousel-control {
+      width: 0;
+    }
+  }
+
+}
+
+#ux-page {
+  .ux-box-header {
+		font-size: 20px;
+		color: #787878;
+	}
+
+	.blank-box {
+		height: 300px;
+		width: 100%;
+		border-bottom: 16px solid #bab98b;
+		border-right: 16px solid #fffeca;
+		background: url(/assets/images/giphy_video.gif);
+		// background-size: 100% 100%;
+	}
+
+  img, video {
+    width: 300px;
+    height: 300px;
+    border-bottom:16px solid #bab98b;
+    border-right:16px solid #fffeca;
+    overflow: hidden;
+    //position: absolute;
+    /*min-height:306px;*/
+    // margin-bottom:48px;
+
+    &.portrait-image {
+      width: 180px;
+      height: 350px;
+    }
+
+    &.loaded {
+      width: auto;
+      height: auto;
+    }
+  }
+
+  // .ux-box-chairlift {
+  //   margin-right: 9.4%;
+  // }
+
+  // .ux-box-jobstack {
+  //   margin-right: 9.57%;
+  // }
+
+  // .ux-box-surfcast {
+  //   /*margin-left: 11%*/
+  // }
+  // .ux-box-silkscreen {
+  //   margin-right: 9.4%;
+  // }
+
+	// .blank-box:before {
+	//     content: '';
+	//     position: absolute;
+	//     top: 0; right: 0;
+	//     border-top: 80px solid white;
+	//     border-left: 80px solid red;
+	//     width: 0;
+	// }
+
+  // @media screen and (max-width: 769px) {
+  //   .ux-box {
+  //     float: none;
+  //     width: 95%;
+  //     max-width: 300px;
+  //     margin-right: auto;
+  //     margin-left: auto;
+  //   }
+  // }
+}
